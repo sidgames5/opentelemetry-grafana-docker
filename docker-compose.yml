@@ -32,6 +32,8 @@ services:
       - "9095:9095"
     volumes:
       - ./run/tempo:/var/tempo
+      - ./run/tempo/metrics_traces:/var/tempo/generator/traces
+      - ./run/tempo/metrics_wal:/var/tempo/generator/wal
     networks:
       - observability
 
